@@ -1,0 +1,274 @@
+
+Style · CSS
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+ 
+/* Dark mode class added by JavaScript */
+body.dark-mode {
+  background-color: #222831;
+  color: #eeeeee;
+}
+ 
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+ 
+header h1 {
+  color: #4a47a3;
+}
+ 
+body.dark-mode header h1 {
+  color: #a29bfe;
+}
+ 
+main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+ 
+/* Search form styling */
+#search-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+ 
+#word-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #4a47a3;
+  border-radius: 5px;
+}
+ 
+#search-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4a47a3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+ 
+#search-btn:hover {
+  background-color: #37348a;
+}
+ 
+#theme-btn {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 8px 16px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ 
+body.dark-mode #theme-btn {
+  background-color: #393e46;
+  color: #eeeeee;
+  border: 1px solid #555;
+}
+ 
+/* Loading and error messages */
+#loading-message {
+  text-align: center;
+  font-style: italic;
+}
+ 
+#error-message {
+  text-align: center;
+  background-color: #ffdddd;
+  color: #a10000;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+ 
+/* Hide elements */
+.hidden {
+  display: none;
+}
+ 
+/* Results section */
+#results {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  animation: fadeIn 0.4s ease-in;
+}
+ 
+body.dark-mode #results {
+  background-color: #393e46;
+}
+ 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+#word-title {
+  color: #4a47a3;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+ 
+body.dark-mode #word-title {
+  color: #a29bfe;
+}
+ 
+#pronunciation-area {
+  margin-bottom: 15px;
+}
+ 
+#phonetic-text {
+  font-style: italic;
+  margin-right: 10px;
+}
+ 
+#audio-btn {
+  padding: 5px 10px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ 
+#audio-btn:hover {
+  background-color: #ddd;
+}
+ 
+#save-btn {
+  display: block;
+  margin-bottom: 15px;
+  padding: 8px 16px;
+  background-color: #ffd93d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+ 
+#save-btn:hover {
+  background-color: #ffce00;
+}
+ 
+#save-btn.saved {
+  background-color: #6bcB77;
+  color: white;
+}
+ 
+/* Meanings / definitions */
+.meaning-block {
+  margin-bottom: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+ 
+body.dark-mode .meaning-block {
+  border-top: 1px solid #555;
+}
+ 
+.part-of-speech {
+  font-weight: bold;
+  color: #4a47a3;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+ 
+body.dark-mode .part-of-speech {
+  color: #a29bfe;
+}
+ 
+.definition-item {
+  margin: 5px 0 5px 20px;
+}
+ 
+.example-text {
+  font-style: italic;
+  color: #666;
+  margin-left: 20px;
+}
+ 
+body.dark-mode .example-text {
+  color: #ccc;
+}
+ 
+.synonyms-text {
+  margin-left: 20px;
+  font-size: 14px;
+  color: #444;
+}
+ 
+body.dark-mode .synonyms-text {
+  color: #ddd;
+}
+ 
+/* Saved words section */
+#saved-words-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+ 
+body.dark-mode #saved-words-section {
+  background-color: #393e46;
+}
+ 
+#saved-words-list {
+  list-style: none;
+  margin-top: 10px;
+}
+ 
+#saved-words-list li {
+  padding: 8px;
+  margin-bottom: 5px;
+  background-color: #f4f4f9;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+ 
+#saved-words-list li:hover {
+  background-color: #e0e0f0;
+}
+ 
+body.dark-mode #saved-words-list li {
+  background-color: #222831;
+}
+ 
+body.dark-mode #saved-words-list li:hover {
+  background-color: #4a4f57;
+}
+ 
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #888;
+}
+ 

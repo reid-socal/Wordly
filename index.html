@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordly - Online Dictionary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Wordly Dictionary</h1>
+    <p>Search any word to see its meaning, pronunciation, and synonyms.</p>
+  </header>
+
+  <main>
+    <!-- Search form -->
+    <form id="search-form">
+      <label for="word-input">Search for a word:</label>
+      <input
+        type="text"
+        id="word-input"
+        name="word-input"
+        placeholder="Type a word here..."
+        aria-label="Word to search"
+        required
+      >
+      <button type="submit" id="search-btn">Search</button>
+    </form>
+
+    <!-- Theme toggle button -->
+    <button id="theme-btn" aria-label="Toggle dark mode">Toggle Dark Mode</button>
+
+    <!-- Loading message -->
+    <p id="loading-message" class="hidden">Loading...</p>
+
+    <!-- Error message -->
+    <p id="error-message" class="hidden"></p>
+
+    <!-- Results section -->
+    <section id="results" class="hidden">
+      <h2 id="word-title"></h2>
+
+      <div id="pronunciation-area">
+        <span id="phonetic-text"></span>
+        <button id="audio-btn" class="hidden" aria-label="Play pronunciation">🔊 Play</button>
+        <audio id="audio-player"></audio>
+      </div>
+
+      <button id="save-btn" aria-label="Save word to favorites">⭐ Save Word</button>
+
+      <div id="meanings-container">
+        <!-- Definitions get added here by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Saved words section -->
+    <section id="saved-words-section">
+      <h2>Saved Words</h2>
+      <ul id="saved-words-list" aria-label="List of saved words"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Data provided by the Free Dictionary API</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
